@@ -1,0 +1,2 @@
+# quanx
+Quantumult X Script
