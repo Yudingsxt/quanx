@@ -1,3 +1,8 @@
+var path1 = $request.path;
+var path2 = $request.path;
+var path3 = $request.path;
+var path4 = $request.path;
+var path5 = $request.path;
 const path1 = '/user/profile';
 const path2 = '/v3plus/index/channel';
 const path3 = '/v3plus/video/getTopFeed';
@@ -5,7 +10,7 @@ const path4 = '/v3plus/index/todayChoice';
 const path5 = '/v3plus/medal/getAll';
 
 var body = $response.body;
-var url=$request.url;
+var url = $request.url;
 if (url.indexOf(path1) != -1) {
     let obj = JSON.parse(body);
     obj['data']['user']['medalList'] = JSON.parse('[{"name":"看剧必备","endTime":"2025-05-20 00:00:00","imgUrl":"http://img.rr.tv/screenshot/20171108/o_1510128764030.png","id":1}]');
