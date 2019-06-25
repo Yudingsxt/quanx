@@ -5,7 +5,7 @@ const path4 = '/v3plus/index/todayChoice';
 const path5 = '/v3plus/medal/getAll';
 
 var body = $response.body;
-
+var url=$request.url;
 if (url.indexOf(path1) != -1) {
     let obj = JSON.parse(body);
     obj['data']['user']['medalList'] = JSON.parse('[{"name":"看剧必备","endTime":"2025-05-20 00:00:00","imgUrl":"http://img.rr.tv/screenshot/20171108/o_1510128764030.png","id":1}]');
