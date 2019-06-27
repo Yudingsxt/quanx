@@ -29,13 +29,15 @@ if (url.indexOf(path3) != -1) {
 }
 
 if (url.indexOf(path4) != -1) {
-    var obj = JSON.parse(body);
-    delete obj['data']['notice'];
-    obj['data']['sections'].splice(2,1);
-    obj['data']['sections'].splice(4,1);
-    obj['data']['sections'].splice(8,1);
-    obj['data']['sections'].splice(10,1);
-    body = JSON.stringify(obj);
+  var boj = JSON.parse(body);
+  delete obj.data.notice;
+  obj.data.sections.splice(-1, 1);
+  obj.data.sections.forEach((element, index) => {
+    if (element['sectionType'] === "AD") {
+      body.data.sections.splice(index, 1);
+    }
+  });
+  body = JSON.stringify(body);
 }
 if (url.indexOf(path5) != -1) {
   var obj = JSON.parse(body);
