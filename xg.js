@@ -1,5 +1,4 @@
 var body = $response.body;
-var url = $request.url;
   let obj = JSON.parse(body);
   obj.content["nickName"] = "Meeta_share";
   obj.content["level"] = "5";
