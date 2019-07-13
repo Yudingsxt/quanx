@@ -1,5 +1,4 @@
 var body = $response.body;
-var url = $request.url;
 
 	let obj = JSON.parse(body);
 	obj.data.uinfo["down_daily_remainders"] = "988";
