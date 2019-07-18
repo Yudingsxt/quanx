@@ -1,7 +1,7 @@
 let body = $response.body;
 var obj=JSON.parse(body);
 obj['data'].forEach((element, index)=>{
-     if(element.hasOwnProperty('adjson')){      
+     if(element.hasOwnProperty('ad')){      
        body['data'].splice(index,1);  
     }
 })
